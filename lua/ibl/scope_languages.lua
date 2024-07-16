@@ -284,7 +284,6 @@ local M = {
         interpolated_expression = true,
     },
     lua = {
-        chunk = true,
         do_statement = true,
         while_statement = true,
         repeat_statement = true,
@@ -298,6 +297,27 @@ local M = {
     },
     mlir = {
         region = true,
+    },
+    nim = {
+        ["if"] = true,
+        case = true,
+        try = true,
+
+        ["for"] = true,
+        ["while"] = true,
+        block = true,
+        static_statement = true,
+        proc_declaration = true,
+        func_declaration = true,
+        method_declaration = true,
+        iterator_declaration = true,
+        converter_declaration = true,
+        template_declaration = true,
+        macro_declaration = true,
+        proc_expression = true,
+        func_expression = true,
+        iterator_expression = true,
+        concept_declaration = true,
     },
     nix = {
         let_expression = true,
@@ -337,11 +357,15 @@ local M = {
 
         exceptionHandler = true,
     },
+    perl = {
+        block = true,
+        block_statement = true,
+    },
     php = {
         class_declaration = true,
         method_declaration = true,
         function_definition = true,
-        anonymous_function_creation_expression = true,
+        anonymous_function = true,
     },
     pony = {
         use_statement = true,
